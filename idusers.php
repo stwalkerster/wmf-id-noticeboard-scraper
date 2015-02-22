@@ -55,6 +55,7 @@ if(isset($_GET['format']))
 			echo serialize($users);
 			break;
 		default:
+			header('Content-Type: text/plain');
 			print_r($users);
 			break;
 	}
